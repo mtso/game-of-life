@@ -1,19 +1,3 @@
-var readline = require('readline');
-
-var rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-})
-
-rl.on('line', (line) => {
-  if (line.trim() === 'exit') {
-    process.exit()
-  } else {
-    board = stepForward(board);
-    print(board)
-  }
-})
-
 function neighbors(grid, row, col) {
   let nop = _ => _;
   let nb = [];
@@ -37,7 +21,7 @@ function neighbors(grid, row, col) {
   return nb;
 }
 
-function stepForward(grid) {
+function nextGeneration(grid) {
   let rows = grid.length;
   let cols = grid[0].length;
   let next = [];
@@ -63,14 +47,7 @@ function print(grid) {
   })
 }
 
-let board = [
-  [1, 1, 0, 0, 0, 0, 0],
-  [1, 1, 0, 1, 0, 0, 0],
-  [0, 0, 0, 1, 0, 0, 0],
-  [0, 1, 1, 0, 1, 1, 0],
-  [0, 0, 0, 1, 0, 0, 0],
-  [0, 0, 0, 1, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0],
-];
-
-print(board)
+module.exports = {
+  nextGeneration,
+  print,
+}
