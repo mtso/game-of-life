@@ -31,7 +31,7 @@ class App extends React.Component {
     this.changeSize = this.changeSize.bind(this)
   }
   componentDidMount() {
-    this.play();    
+    this.play();
   }
   changeSize(event) {
     let size = +event.target.value
