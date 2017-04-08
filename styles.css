@@ -1,0 +1,22 @@
+button, select option {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid lightGray;
+  background-color: white; }
+
+select {
+  height: 31px;
+  border: 1px solid gray;
+  background-color: white;
+  -webkit-appearance: none;
+  padding-left: 8px;
+  -webkit-appearance: "none";
+  -moz-appearance: "none";
+  -ms-appearance: "none";
+  appearance: "none"; }
+
+button:active {
+  background-color: #cccccc; }
+
+body {
+  font-family: sans-serif; }
