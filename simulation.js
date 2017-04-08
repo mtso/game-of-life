@@ -28,12 +28,12 @@ function nextGeneration(grid) {
   for (var row = 0; row < rows; row++) {
     let cells = [];
     for (var col = 0; col < cols; col++) {
-      let nb = neighbors(grid, row, col).filter(n => n === 1);
+      let nb = neighbors(grid, row, col).filter(n => n >= 1);
       let current = grid[row][col];
-      var isAlive = (current === 1) ?
+      var isAlive = (current >= 1) ?
         nb.length === 2 || nb.length === 3 :
         nb.length === 3;
-      cells.push(isAlive ? 1 : 0)
+      cells.push(isAlive ? current + 1 : 0)
     }
     next.push(cells)
   }
