@@ -6,13 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "torus run webpack",
-    "start": "torus run webpack-dev-server"
+    "start": "torus run webpack-dev-server",
+    "dist": "webpack -p"
   },
   "author": "mtso <mtso@tuta.io>",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.0",
     "extract-text-webpack-plugin": "^2.1.0",
